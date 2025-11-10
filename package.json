@@ -1,4 +1,5 @@
-{
+{ 
+  "main": "server.js",
   "dependencies": {
     "lucide-react": "^0.552.0"
   },
