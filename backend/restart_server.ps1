@@ -10,13 +10,13 @@ $processIds = netstat -ano | Select-String ":5000" | ForEach-Object {
 
 if ($processIds) {
     Write-Host "Found processes: $processIds" -ForegroundColor Yellow
-    foreach ($pid in $processIds) {
-        if ($pid -and $pid -match '^\d+$') {
+    foreach ($procId in $processIds) {
+        if ($procId -and $procId -match '^\d+$') {
             try {
-                Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
-                Write-Host "Killed process $pid" -ForegroundColor Green
+                Stop-Process -Id $procId -Force -ErrorAction SilentlyContinue
+                Write-Host "Killed process $procId" -ForegroundColor Green
             } catch {
-                Write-Host "Could not kill process $pid (may not exist)" -ForegroundColor Gray
+                Write-Host "Could not kill process $procId (may not exist)" -ForegroundColor Gray
             }
         }
     }
