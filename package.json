@@ -1,10 +1,1 @@
-{ 
-  "main": "server.js",
-  "dependencies": {
-    "lucide-react": "^0.552.0"
-  },
-  "scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js"
-  }
-}
+{"main":"server.js","dependencies":{"lucide-react":"^0.552.0","node-cron":"^4.2.1"},"scripts":{"start":"node server.js","dev":"nodemon server.js"}}
